@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { 
@@ -19,10 +18,10 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Badge } from "@/components/ui/badge";
 import { ProductCard, ProductProps } from "@/components/ProductCard";
 import { ProposalCard, ProposalProps } from "@/components/ProposalCard";
 
-// Mock data for dashboard
 const mockRecentProducts: ProductProps[] = [
   {
     id: "1",
@@ -141,12 +140,10 @@ const AdvertiserDashboard = () => {
   };
   
   const handleApproveProposal = (id: string) => {
-    // This would be an API call in a real application
     console.log(`Approving proposal ${id}`);
   };
   
   const handleRejectProposal = (id: string) => {
-    // This would be an API call in a real application
     console.log(`Rejecting proposal ${id}`);
   };
   
@@ -435,13 +432,11 @@ const DeveloperDashboard = () => {
 };
 
 const Dashboard = () => {
-  // In a real app, this would come from auth context
   const [userType, setUserType] = useState<string | null>(null);
   
   useEffect(() => {
-    // Check localStorage for user type
     const storedUserType = localStorage.getItem("userType");
-    setUserType(storedUserType || "advertiser"); // Default to advertiser if not set
+    setUserType(storedUserType || "advertiser");
   }, []);
   
   return (
