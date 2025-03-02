@@ -1,8 +1,7 @@
-
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, CheckCircle, GameController, LucideIcon, ShoppingBag, Zap } from 'lucide-react';
+import { ArrowRight, CheckCircle, Gamepad, LucideIcon, ShoppingBag, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Navbar } from '@/components/Navbar';
 
@@ -104,7 +103,7 @@ const Features = () => (
           delay={0.1}
         />
         <Feature 
-          icon={GameController}
+          icon={Gamepad}
           title="Game Profile"
           description="Game developers can showcase their games and track record to attract advertisers."
           delay={0.2}
@@ -383,7 +382,6 @@ const Footer = () => (
 
 const Index = () => {
   useEffect(() => {
-    // Add a grid pattern to the root element for hero background
     document.documentElement.style.setProperty(
       '--grid-pattern',
       'radial-gradient(hsl(var(--primary)/10) 1px, transparent 0)'
@@ -397,7 +395,6 @@ const Index = () => {
     );
     
     return () => {
-      // Cleanup
       document.documentElement.style.removeProperty('--grid-pattern');
       document.documentElement.style.removeProperty('--grid-pattern-size');
     };

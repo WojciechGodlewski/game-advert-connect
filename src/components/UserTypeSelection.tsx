@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Check, GameController, ShoppingBag } from "lucide-react";
+import { Check, Gamepad, ShoppingBag } from "lucide-react";
 
 interface UserTypeOption {
   id: string;
@@ -28,7 +28,7 @@ export const UserTypeSelection = ({ onSelect }: UserTypeSelectionProps) => {
       id: "developer",
       title: "Game Developer",
       description: "Find products to integrate into your games and monetize them.",
-      icon: <GameController className="h-10 w-10" />,
+      icon: <Gamepad className="h-10 w-10" />,
     },
   ];
   
